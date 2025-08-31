@@ -69,6 +69,51 @@ export default function Home() {
     </div>
   ))}
 </section>
+<section style={styles.contentSection}>
+  <h2>Get Free YouTube Thumbnails</h2>
+  <p>
+    Get free thumbnail images of any YouTube videos in Full HD (1080), HD (720), SD, and also in small size.
+    Currently supported formats: YouTube (HD, HQ, 1080p, 4K) videos.
+  </p>
+
+  <h3>What is the use of this YouTube Thumbnail Grabber website?</h3>
+  <p>
+    People use this YouTube thumbnail downloader to get thumbnails from any YouTube videos.
+    They can use them in presentations, animation work, or many other activities.
+  </p>
+
+  <h3>How to use this YouTube thumbnail downloader website?</h3>
+  <p>
+    First, copy the YouTube video link whose thumbnail you want. Then paste that URL in the input box above.
+    The moment you paste the link, it will automatically generate different sizes of thumbnails.
+    Click on a thumbnail to download it. On Android, it saves automatically. On iPhone, you may need special steps.
+  </p>
+
+  <h3>Is it legal to download YouTube thumbnails?</h3>
+  <p>
+    Yes, it's 100% legal to download thumbnails. But since thumbnails and videos are copyrighted, you should ask for author permission before reusing them.
+  </p>
+
+  <h3>Compatibility</h3>
+  <p>
+    This website works well on almost all devices except iPhone (unless jailbroken). Works fine on Android, desktop, and laptops.
+  </p>
+
+  <h3>Copyright Risks</h3>
+  <p>
+    YouTube video thumbnails are copyrighted by the video owner. Always ask permission if you reuse it outside personal use.
+  </p>
+
+  <h3>SEO Considerations</h3>
+  <p>
+    Reusing YouTube thumbnails is generally not SEO friendly, because thumbnails are already indexed by Google.
+    You can make them unique using editing software to reuse them safely.
+  </p>
+
+  <p style={{ fontSize: "12px", color: "#666", marginTop: "20px" }}>
+    © 2025 Downloaderyoutubethumbnails.com - Educational & Fair Use
+  </p>
+</section>
 
 
       {/* Footer */}
@@ -115,3 +160,10 @@ footerButton: {
   transition: "background-color 0.2s",
 },
 
+contentSection: {
+  padding: "20px",
+  backgroundColor: "#f9f9f9",
+  marginTop: "30px",
+  lineHeight: "1.6",
+  color: "#333",
+},
