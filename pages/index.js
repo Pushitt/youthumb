@@ -59,13 +59,17 @@ export default function Home() {
       </section>
 
       {/* Thumbnails Grid */}
-      <section style={styles.grid}>
-        {thumbnails.map((src) => (
-          <a href={src} target="_blank" key={src} rel="noreferrer">
-            <img src={src} alt="Thumbnail" style={styles.thumbnail} />
-          </a>
-        ))}
-      </section>
+     <section style={styles.grid}>
+  {thumbnails.map((src, index) => (
+    <div key={src} style={styles.thumbnailContainer}>
+      <a href={src} target="_blank" rel="noreferrer">
+        <img src={src} alt={`Thumbnail ${index + 1}`} style={styles.thumbnail} />
+      </a>
+      <p style={styles.caption}>Thumbnail {index + 1}</p>
+    </div>
+  ))}
+</section>
+
 
       {/* Footer */}
      <footer style={styles.footer}>
@@ -83,56 +87,31 @@ export default function Home() {
 
 // Simple CSS-in-JS
 const styles = {
-  header: {
-    textAlign: "center",
-    padding: "30px 20px",
-    backgroundColor: "#f7f7f7",
-  },
-  inputSection: {
-    textAlign: "center",
-    margin: "20px 0",
-  },
-  input: {
-    padding: "10px",
-    width: "60%",
-    maxWidth: "400px",
-    borderRadius: "5px",
-    border: "1px solid #ccc",
-    fontSize: "16px",
-  },
-  button: {
-    padding: "10px 20px",
-    marginLeft: "10px",
-    fontSize: "16px",
-    borderRadius: "5px",
-    border: "none",
-    backgroundColor: "#28a745",
-    color: "#fff",
-    cursor: "pointer",
-  },
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-    gap: "15px",
-    padding: "20px",
-    justifyItems: "center",
-  },
-  thumbnail: {
-    width: "100%",
-    borderRadius: "5px",
-    border: "1px solid #ccc",
-    cursor: "pointer",
-    transition: "transform 0.2s",
-  },
-  footer: {
-    textAlign: "center",
-    padding: "20px",
-    backgroundColor: "#f7f7f7",
-    marginTop: "40px",
-  },
-  footerLink: {
-    color: "#000",
-    textDecoration: "none",
-    margin: "0 5px",
-  },
-};
+  thumbnailContainer: {
+  textAlign: "center",
+  marginBottom: "20px",
+},
+caption: {
+  fontSize: "14px",
+  color: "#333",
+  marginTop: "5px",
+},
+infoSection: {
+  padding: "20px",
+  backgroundColor: "#f9f9f9",
+  marginTop: "30px",
+},
+footerButton: {
+  display: "inline-block",
+  padding: "10px 20px",
+  margin: "5px",
+  backgroundColor: "#28a745", // green button
+  color: "#fff",
+  borderRadius: "5px",
+  textDecoration: "none",
+  fontSize: "14px",
+  textAlign: "center",
+  cursor: "pointer",
+  transition: "background-color 0.2s",
+},
+
