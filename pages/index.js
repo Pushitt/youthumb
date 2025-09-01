@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div style={styles.page}>
       <Head>
         <title>Download YouTube Thumbnails | Educational Use</title>
         <meta
@@ -59,111 +59,164 @@ export default function Home() {
       </section>
 
       {/* Thumbnails Grid */}
-     <section style={styles.grid}>
-  {thumbnails.map((src, index) => (
-    <div key={src} style={styles.thumbnailContainer}>
-      <a href={src} target="_blank" rel="noreferrer">
-        <img src={src} alt={`Thumbnail ${index + 1}`} style={styles.thumbnail} />
-      </a>
-      <p style={styles.caption}>Thumbnail {index + 1}</p>
-    </div>
-  ))}
-</section>
-<section style={styles.contentSection}>
-  <h2>Get Free YouTube Thumbnails</h2>
-  <p>
-    Get free thumbnail images of any YouTube videos in Full HD (1080), HD (720), SD, and also in small size.
-    Currently supported formats: YouTube (HD, HQ, 1080p, 4K) videos.
-  </p>
+      <section style={styles.grid}>
+        {thumbnails.map((src, index) => (
+          <div key={src} style={styles.thumbnailContainer}>
+            <a href={src} target="_blank" rel="noreferrer">
+              <img
+                src={src}
+                alt={`Thumbnail ${index + 1}`}
+                style={styles.thumbnail}
+              />
+            </a>
+            <p style={styles.caption}>Thumbnail {index + 1}</p>
+          </div>
+        ))}
+      </section>
 
-  <h3>What is the use of this YouTube Thumbnail Grabber website?</h3>
-  <p>
-    People use this YouTube thumbnail downloader to get thumbnails from any YouTube videos.
-    They can use them in presentations, animation work, or many other activities.
-  </p>
+      {/* Info Section */}
+      <section style={styles.contentSection}>
+        <h2>Get Free YouTube Thumbnails</h2>
+        <p>
+          Get free thumbnail images of any YouTube videos in Full HD (1080),
+          HD (720), SD, and also in small size. Currently supported formats:
+          YouTube (HD, HQ, 1080p, 4K) videos.
+        </p>
 
-  <h3>How to use this YouTube thumbnail downloader website?</h3>
-  <p>
-    First, copy the YouTube video link whose thumbnail you want. Then paste that URL in the input box above.
-    The moment you paste the link, it will automatically generate different sizes of thumbnails.
-    Click on a thumbnail to download it. On Android, it saves automatically. On iPhone, you may need special steps.
-  </p>
+        <h3>What is the use of this YouTube Thumbnail Grabber website?</h3>
+        <p>
+          People use this YouTube thumbnail downloader to get thumbnails from
+          any YouTube videos. They can use them in presentations, animation
+          work, or many other activities.
+        </p>
 
-  <h3>Is it legal to download YouTube thumbnails?</h3>
-  <p>
-    Yes, it's 100% legal to download thumbnails. But since thumbnails and videos are copyrighted, you should ask for author permission before reusing them.
-  </p>
+        <h3>How to use this YouTube thumbnail downloader website?</h3>
+        <p>
+          First, copy the YouTube video link whose thumbnail you want. Then
+          paste that URL in the input box above. The moment you paste the
+          link, it will automatically generate different sizes of thumbnails.
+          Click on a thumbnail to download it. On Android, it saves
+          automatically. On iPhone, you may need special steps.
+        </p>
 
-  <h3>Compatibility</h3>
-  <p>
-    This website works well on almost all devices except iPhone (unless jailbroken). Works fine on Android, desktop, and laptops.
-  </p>
+        <h3>Is it legal to download YouTube thumbnails?</h3>
+        <p>
+          Yes, it's 100% legal to download thumbnails. But since thumbnails
+          and videos are copyrighted, you should ask for author permission
+          before reusing them.
+        </p>
 
-  <h3>Copyright Risks</h3>
-  <p>
-    YouTube video thumbnails are copyrighted by the video owner. Always ask permission if you reuse it outside personal use.
-  </p>
+        <h3>Compatibility</h3>
+        <p>
+          This website works well on almost all devices except iPhone (unless
+          jailbroken). Works fine on Android, desktop, and laptops.
+        </p>
 
-  <h3>SEO Considerations</h3>
-  <p>
-    Reusing YouTube thumbnails is generally not SEO friendly, because thumbnails are already indexed by Google.
-    You can make them unique using editing software to reuse them safely.
-  </p>
+        <h3>Copyright Risks</h3>
+        <p>
+          YouTube video thumbnails are copyrighted by the video owner. Always
+          ask permission if you reuse it outside personal use.
+        </p>
 
-  <p style={{ fontSize: "12px", color: "#666", marginTop: "20px" }}>
-    © 2025 Downloaderyoutubethumbnails.com - Educational & Fair Use
-  </p>
-</section>
+        <h3>SEO Considerations</h3>
+        <p>
+          Reusing YouTube thumbnails is generally not SEO friendly, because
+          thumbnails are already indexed by Google. You can make them unique
+          using editing software to reuse them safely.
+        </p>
 
+        <p style={{ fontSize: "12px", color: "#666", marginTop: "20px" }}>
+          © 2025 Downloaderyoutubethumbnails.com - Educational & Fair Use
+        </p>
+      </section>
 
       {/* Footer */}
-     <footer style={styles.footer}>
-  <Link href="/terms" style={styles.footerLink}>Terms of Use</Link> |{" "}
-  <Link href="/disclaimer" style={styles.footerLink}>Disclaimer</Link>
-  <p style={{ marginTop: "10px", fontSize: "14px" }}>
-    &copy; 2025 Downloaderyoutubethumbnails.com | Educational & Fair Use
-  </p>
-</footer>
-
-
+      <footer style={styles.footer}>
+        <div>
+          <Link href="/about" style={styles.footerLink}>About</Link> |{" "}
+          <Link href="/contact" style={styles.footerLink}>Contact</Link> |{" "}
+          <Link href="/privacy" style={styles.footerLink}>Privacy Policy</Link> |{" "}
+          <Link href="/terms" style={styles.footerLink}>Terms of Use</Link> |{" "}
+          <Link href="/disclaimer" style={styles.footerLink}>Disclaimer</Link>
+        </div>
+        <div style={{ marginTop: "10px", fontSize: "14px" }}>
+          &copy; 2025 Downloaderyoutubethumbnails.com | Educational & Fair Use
+        </div>
+      </footer>
     </div>
   );
 }
 
-// Simple CSS-in-JS
+// ✅ Styles
 const styles = {
+  page: {
+    backgroundColor: "#1ca9c9", // 🌊 sea blue background
+    minHeight: "100vh",
+    padding: "0",
+    margin: "0",
+  },
+  header: {
+    textAlign: "center",
+    padding: "20px",
+    backgroundColor: "rgba(255,255,255,0.8)",
+  },
+  inputSection: {
+    display: "flex",
+    justifyContent: "center",
+    padding: "20px",
+  },
+  input: {
+    width: "60%",
+    padding: "10px",
+    marginRight: "10px",
+    border: "1px solid #ccc",
+    borderRadius: "5px",
+  },
+  button: {
+    padding: "10px 20px",
+    backgroundColor: "#0070f3",
+    color: "#fff",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+  },
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+    gap: "20px",
+    padding: "20px",
+  },
   thumbnailContainer: {
-  textAlign: "center",
-  marginBottom: "20px",
-},
-caption: {
-  fontSize: "14px",
-  color: "#333",
-  marginTop: "5px",
-},
-infoSection: {
-  padding: "20px",
-  backgroundColor: "#f9f9f9",
-  marginTop: "30px",
-},
-footerButton: {
-  display: "inline-block",
-  padding: "10px 20px",
-  margin: "5px",
-  backgroundColor: "#28a745", // green button
-  color: "#fff",
-  borderRadius: "5px",
-  textDecoration: "none",
-  fontSize: "14px",
-  textAlign: "center",
-  cursor: "pointer",
-  transition: "background-color 0.2s",
-},
-
-contentSection: {
-  padding: "20px",
-  backgroundColor: "#f9f9f9",
-  marginTop: "30px",
-  lineHeight: "1.6",
-  color: "#333",
-},
+    textAlign: "center",
+    marginBottom: "20px",
+  },
+  thumbnail: {
+    width: "100%",
+    borderRadius: "10px",
+  },
+  caption: {
+    fontSize: "14px",
+    color: "#333",
+    marginTop: "5px",
+  },
+  contentSection: {
+    padding: "20px",
+    backgroundColor: "rgba(255,255,255,0.9)",
+    marginTop: "30px",
+    lineHeight: "1.6",
+    color: "#333",
+    borderRadius: "10px",
+  },
+  footer: {
+    textAlign: "center",
+    padding: "20px",
+    marginTop: "40px",
+    borderTop: "1px solid #ccc",
+    backgroundColor: "rgba(255,255,255,0.8)",
+  },
+  footerLink: {
+    margin: "0 10px",
+    color: "#0070f3",
+    textDecoration: "none",
+  },
+};
