@@ -136,6 +136,7 @@ export default function Home() {
           <Link href="/about" style={styles.footerLink}>About</Link> |{" "}
           <Link href="/contact" style={styles.footerLink}>Contact</Link> |{" "}
           <Link href="/privacy" style={styles.footerLink}>Privacy Policy</Link> |{" "}
+          <Link href="/blog" style={styles.footerLink}>Blog</Link> |{" "} {/* Step 4: Blog Link */}
           <Link href="/terms" style={styles.footerLink}>Terms of Use</Link> |{" "}
           <Link href="/disclaimer" style={styles.footerLink}>Disclaimer</Link>
         </div>
@@ -220,3 +221,26 @@ const styles = {
     textDecoration: "none",
   },
 };
+
+/* Step 5 instructions for future blog posts:
+
+// Create /pages/blog/post-1.js
+import Head from "next/head";
+
+export default function Post1() {
+  return (
+    <>
+      <Head>
+        <title>5 Tips to Make Better YouTube Thumbnails | Downloaderyoutubethumbnails.com</title>
+        <meta
+          name="description"
+          content="Learn how to create better YouTube thumbnails with these 5 simple tips."
+        />
+      </Head>
+      <h1>5 Tips to Make Better YouTube Thumbnails</h1>
+      <p>Content of your blog post goes here...</p>
+    </>
+  );
+}
+
+*/
