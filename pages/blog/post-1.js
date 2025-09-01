@@ -15,7 +15,9 @@ export default function Post1() {
         <li>Use high-resolution images</li>
       </ol>
       <p>
-        <Link href="/blog" style={{ color: "#0070f3" }}>← Back to Blog</Link>
+        <Link href="/blog" legacyBehavior>
+          <a style={{ color: "#0070f3" }}>← Back to Blog</a>
+        </Link>
       </p>
     </div>
   );

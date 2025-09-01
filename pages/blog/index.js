@@ -10,11 +10,14 @@ export default function Blog() {
     <div style={{ padding: "20px", maxWidth: "800px", margin: "0 auto" }}>
       <h1>Blog for YouTubers</h1>
       <p>Tips, tricks, and guides to help YouTubers and content creators.</p>
+
       <ul>
         {posts.map((post) => (
           <li key={post.slug} style={{ margin: "15px 0" }}>
-            <Link href={`/blog/${post.slug}`} style={{ color: "#0070f3" }}>
-              {post.title}
+            <Link href={`/blog/${post.slug}`} legacyBehavior>
+              <a style={{ color: "#0070f3", textDecoration: "underline" }}>
+                {post.title}
+              </a>
             </Link>
           </li>
         ))}
