@@ -60,8 +60,9 @@ export default function Post3() {
       </p>
 
       <p>
-        <Link href="/blog">
-          <a style={{ color: "#0070f3" }}>← Back to Blog</a>
+        {/* ✅ Updated Link without <a> */}
+        <Link href="/blog" style={{ color: "#0070f3" }}>
+          ← Back to Blog
         </Link>
       </p>
     </div>
